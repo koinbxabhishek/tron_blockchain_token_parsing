@@ -77,11 +77,13 @@ public class TransferScanner
 
                 Console.WriteLine($"🔍 Tron Scanning {_startBlock} → {endBlock}");
 
+                string ethtokenFormat = TronAddressConverter.ConvertTronToHex(_tokenAddress);
+
                 var filter = new NewFilterInput
                 {
                     FromBlock = new BlockParameter(new HexBigInteger(_startBlock)),
                     ToBlock = new BlockParameter(new HexBigInteger(endBlock)),
-                    Address = new[] { _tokenAddress },
+                    Address = new[] { ethtokenFormat },
                     Topics = new object[] { _transferTopic }
                 };
 

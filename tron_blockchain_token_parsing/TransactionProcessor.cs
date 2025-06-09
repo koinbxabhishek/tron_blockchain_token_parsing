@@ -6,8 +6,8 @@ using System.Text.Json;
 
 class TransactionProcessor
 {
-    private static string connectionString = "";
-    private static string apiUrl = "";
+    private static string connectionString = "Server=tcp:koinbx-blockchain.database.windows.net,1433;Initial Catalog=koinbx_blockchain;User ID=eqNjI7YVihZr77JT2Qtkh5NMFZtOGk;Password=Mj0$nfyb00LfoG@ca&TQOkzC72*18f;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;\r\n";
+    private static string apiUrl = "https://captureapi.koinbx.com/customRouter/customWebhookFunction";
 
     public TransactionProcessor() {
         var config = new ConfigurationBuilder()
